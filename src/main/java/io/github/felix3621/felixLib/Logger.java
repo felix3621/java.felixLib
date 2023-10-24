@@ -199,27 +199,6 @@ public class Logger {
     public void error(String message) {
         this.addLogEntry(logLevel.ERROR, message);
     }
-    /*
-
-    host>loggingScript:
-        infinity loop:
-            if queue is not empty:
-                get element from queue
-                create formatted string from element
-                print the formatted string to console
-                write the formatted string to log file
-    host>logthreadControl
-        stop
-        start
-        forceStop
-    createNewEntry:
-        a: level and message
-            create new logElement with this data
-        b: logElement
-            create new logElement, modify to use the provided element
-    debug, info, warn, error:
-        premade to trigger createNewElement
-     */
 
     private static String getDate() {
         Calendar c = Calendar.getInstance();
