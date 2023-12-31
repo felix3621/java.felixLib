@@ -1,5 +1,8 @@
 package io.github.felix3621.felixLib;
 
+import io.github.felix3621.felixLib.nbt.*;
+
+import java.nio.ByteBuffer;
 import java.nio.file.Path;
 
 public class Main {
@@ -36,5 +39,23 @@ public class Main {
 
         log_sub.end();
         log_file.end();
+
+        //nbt test:write
+        CompoundTag compound = new CompoundTag();
+        compound.put("BooleanTest", BooleanTag.valueOf(true));
+        compound.put("ByteTest", ByteTag.valueOf((byte)12));
+        compound.put("CompoundTest", new CompoundTag());
+        compound.put("DoubleTest", DoubleTag.valueOf(15d));
+        compound.put("FloatTest", FloatTag.valueOf(15f));
+        compound.put("IntTest", IntTag.valueOf(11));
+        compound.put("ListTest", new ListTag());
+        compound.put("LongTest", LongTag.valueOf(15L));
+        compound.put("ShortTest", ShortTag.valueOf((short)15));
+        compound.put("StringTest", StringTag.valueOf("Bob"));
+        fileAccessor.write(Path.of("./alpha/test.nbt"),compound);
+
+        //nbt test:read
+        CompoundTag file = fileAccessor.read(Path.of("./alpha/test.nbt"));
+        System.out.println(file.getAllKeys());
     }
 }

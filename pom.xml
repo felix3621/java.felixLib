@@ -6,7 +6,7 @@
 
     <groupId>io.github.felix3621.felixLib</groupId>
     <artifactId>felixLib</artifactId>
-    <version>0.4</version>
+    <version>0.5</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
