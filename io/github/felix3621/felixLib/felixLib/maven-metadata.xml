@@ -3,13 +3,14 @@
   <groupId>io.github.felix3621.felixLib</groupId>
   <artifactId>felixLib</artifactId>
   <versioning>
-    <release>0.4</release>
+    <release>0.5</release>
     <versions>
       <version>0.1</version>
       <version>0.2</version>
       <version>0.3</version>
       <version>0.4</version>
+      <version>0.5</version>
     </versions>
-    <lastUpdated>20231024182900</lastUpdated>
+    <lastUpdated>20231231193901</lastUpdated>
   </versioning>
 </metadata>
